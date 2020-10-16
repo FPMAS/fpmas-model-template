@@ -13,7 +13,7 @@ int main(int argc, char** argv) {
 	fpmas::init(argc, argv);
 	{
 		// Defines a default model
-		fpmas::model::DefaultModel<HardSyncMode> model;
+		fpmas::model::Model<HardSyncMode> model;
 
 		// Defines an agent group
 		fpmas::model::AgentGroup& group = model.buildGroup(Group1);
