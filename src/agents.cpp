@@ -1,6 +1,6 @@
 #include "agents.h"
 
-void Agent::act() {
+void Agent::hello_world() {
 	std::cout << "[" << this->model()->graph().getMpiCommunicator().getRank()
 		<< "] Hello World" << std::endl;
 }

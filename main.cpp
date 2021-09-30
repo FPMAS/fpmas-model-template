@@ -16,7 +16,8 @@ int main(int argc, char** argv) {
 		fpmas::model::Model<HardSyncMode> model;
 
 		// Defines an agent group
-		fpmas::model::AgentGroup& group = model.buildGroup(Group1);
+		fpmas::model::Behavior<Agent> hello_world(&Agent::hello_world);
+		fpmas::model::AgentGroup& group = model.buildGroup(Group1, hello_world);
 		group.add(new Agent);
 		
 		// Set up agents and other groups
@@ -26,7 +27,7 @@ int main(int argc, char** argv) {
 		model.scheduler().schedule(0, 10, model.loadBalancingJob());
 
 		// Schedules agent group execution
-		model.scheduler().schedule(0, 1, group.job());
+		model.scheduler().schedule(0, 1, group.jobs());
 		// Schedules other jobs
 		// ...
 		

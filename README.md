@@ -5,7 +5,7 @@ repository](https://docs.github.com/en/free-pro-team@latest/github/creating-clon
 
 ## Project structure
 
-- `CMakeLists.txt`: Minimalist CMakeLists, that linked to the FPMAS dependency
+- `CMakeLists.txt`: Minimalist and generic CMakeLists
 - `main.cpp`: C++ main file with required FPMAS set up
 - `include`: C++ header files
   - `agents.h`: Agent example definition
